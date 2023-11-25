@@ -19,7 +19,11 @@ const createServer = () => {
 
 createServer();
 
-app.use(cors());
+app.use(cors("*"));
+
+app.get("/", (req, res) => {
+  res.status(200).send("This is a JSON server");
+});
 
 app.use(jsonServer.bodyParser);
 app.use("/api", (req, res, next) => router(req, res, next));
