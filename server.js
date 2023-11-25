@@ -4,7 +4,7 @@ const express = require("express"),
   jsonServer = require("json-server");
 
 const fileName = "./data.js";
-const port = "3500";
+const port = 8080;
 
 let router = undefined;
 
